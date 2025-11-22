@@ -1,0 +1,263 @@
+import type { Course } from "@/types/types";
+
+export const allCourses: Course[] = [
+  // Semester 1 - Foundation Courses
+  {
+    id: "cs501",
+    code: "CS 501",
+    name: "Advanced Python Programming",
+    type: "Основной",
+    credits: 4,
+    description:
+      "Master Python for data science and ML. Cover advanced topics like decorators, generators, and async programming.",
+    skillsImpact: {
+      Python: 25,
+      "Software Engineering": 15,
+    },
+  },
+  {
+    id: "math510",
+    code: "MATH 510",
+    name: "Linear Algebra & Optimization",
+    type: "Основной",
+    credits: 4,
+    description:
+      "Essential mathematical foundations for ML. Matrix operations, eigenvalues, and optimization techniques.",
+    skillsImpact: {
+      Mathematics: 30,
+      Statistics: 10,
+    },
+  },
+  {
+    id: "stat520",
+    code: "STAT 520",
+    name: "Probability & Statistical Inference",
+    type: "Основной",
+    credits: 4,
+    description: "Rigorous treatment of probability theory, distributions, hypothesis testing, and Bayesian inference.",
+    skillsImpact: {
+      Statistics: 30,
+      Mathematics: 15,
+    },
+  },
+  {
+    id: "cs502",
+    code: "CS 502",
+    name: "Data Structures & Algorithms",
+    type: "Основной",
+    credits: 3,
+    description: "Advanced algorithms for data processing. Time complexity, graph algorithms, and dynamic programming.",
+    skillsImpact: {
+      "Software Engineering": 25,
+      Python: 10,
+    },
+  },
+
+  // Semester 2 - Основной ML & Data
+  {
+    id: "ml601",
+    code: "ML 601",
+    name: "Machine Learning Fundamentals",
+    type: "Основной",
+    credits: 4,
+    description: "Supervised and unsupervised learning. Regression, classification, clustering, and model evaluation.",
+    skillsImpact: {
+      "Machine Learning": 30,
+      Python: 15,
+      Statistics: 10,
+    },
+    prerequisites: ["cs501", "stat520"],
+  },
+  {
+    id: "data601",
+    code: "DATA 601",
+    name: "Database Systems & SQL",
+    type: "Основной",
+    credits: 3,
+    description: "Relational databases, query optimization, indexing, and transaction management.",
+    skillsImpact: {
+      SQL: 35,
+      "Data Engineering": 15,
+    },
+  },
+  {
+    id: "vis601",
+    code: "VIS 601",
+    name: "Data Visualization & Analytics",
+    type: "Элективный",
+    credits: 3,
+    description: "Tell stories with data. Master visualization libraries and dashboard creation.",
+    skillsImpact: {
+      "Data Visualization": 30,
+      "Data Analysis": 20,
+      Python: 10,
+    },
+  },
+  {
+    id: "bi601",
+    code: "BI 601",
+    name: "Business Intelligence & Strategy",
+    type: "Элективный",
+    credits: 3,
+    description: "Translate data insights into business value. KPIs, metrics, and strategic decision-making.",
+    skillsImpact: {
+      "Business Intelligence": 30,
+      "Data Analysis": 15,
+      Communication: 20,
+    },
+  },
+
+  // Semester 3 - Advanced Specialization
+  {
+    id: "dl701",
+    code: "DL 701",
+    name: "Deep Learning & Neural Networks",
+    type: "Элективный",
+    credits: 4,
+    description: "CNNs, RNNs, Transformers, and attention mechanisms. Implement models with PyTorch/TensorFlow.",
+    skillsImpact: {
+      "Deep Learning": 35,
+      "Machine Learning": 15,
+      Python: 15,
+    },
+    prerequisites: ["ml601"],
+  },
+  {
+    id: "cloud701",
+    code: "CLOUD 701",
+    name: "Cloud Computing & Architecture",
+    type: "Элективный",
+    credits: 3,
+    description: "AWS/Azure/GCP services. Scalable infrastructure, containerization, and serverless computing.",
+    skillsImpact: {
+      "Cloud Computing": 35,
+      DevOps: 20,
+      "Software Engineering": 10,
+    },
+  },
+  {
+    id: "mlops701",
+    code: "MLOPS 701",
+    name: "MLOps & Production ML",
+    type: "Элективный",
+    credits: 4,
+    description: "Deploy ML models to production. CI/CD for ML, monitoring, versioning, and A/B testing.",
+    skillsImpact: {
+      MLOps: 40,
+      "Cloud Computing": 15,
+      "Software Engineering": 15,
+    },
+    prerequisites: ["ml601"],
+  },
+  {
+    id: "data701",
+    code: "DATA 701",
+    name: "Big Data & Distributed Systems",
+    type: "Элективный",
+    credits: 4,
+    description: "Spark, Hadoop, and distributed computing. Process massive datasets efficiently.",
+    skillsImpact: {
+      "Data Engineering": 35,
+      "Distributed Systems": 30,
+      SQL: 10,
+    },
+    prerequisites: ["data601"],
+  },
+  {
+    id: "nlp701",
+    code: "NLP 701",
+    name: "Natural Language Processing",
+    type: "Элективный",
+    credits: 4,
+    description: "Modern NLP with transformers. Text classification, generation, and language models.",
+    skillsImpact: {
+      "Deep Learning": 20,
+      "Machine Learning": 15,
+      Python: 10,
+    },
+    prerequisites: ["ml601"],
+  },
+
+  // Semester 4 - Advanced & Capstone
+  {
+    id: "research801",
+    code: "RES 801",
+    name: "Research Methods & Experimentation",
+    type: "Элективный",
+    credits: 3,
+    description: "Design rigorous experiments. Statistical testing, causal inference, and reproducible research.",
+    skillsImpact: {
+      "Research Methods": 35,
+      Statistics: 20,
+      Theory: 20,
+    },
+  },
+  {
+    id: "rl801",
+    code: "RL 801",
+    name: "Reinforcement Learning",
+    type: "Элективный",
+    credits: 4,
+    description: "Train agents through trial and error. Q-learning, policy gradients, and deep RL.",
+    skillsImpact: {
+      "Deep Learning": 25,
+      "Machine Learning": 20,
+      Theory: 15,
+    },
+    prerequisites: ["dl701"],
+  },
+  {
+    id: "etl801",
+    code: "ETL 801",
+    name: "Advanced ETL & Data Pipelines",
+    type: "Элективный",
+    credits: 3,
+    description: "Build robust data pipelines. Airflow, data quality, and pipeline orchestration.",
+    skillsImpact: {
+      ETL: 40,
+      "Data Engineering": 20,
+      Python: 10,
+    },
+    prerequisites: ["data701"],
+  },
+  {
+    id: "prod801",
+    code: "PROD 801",
+    name: "AI Product Development",
+    type: "Элективный",
+    credits: 3,
+    description: "Build AI products users love. User research, roadmapping, and cross-functional leadership.",
+    skillsImpact: {
+      "Product Management": 40,
+      "Business Intelligence": 20,
+      Communication: 25,
+    },
+  },
+  {
+    id: "monitor801",
+    code: "MON 801",
+    name: "ML Monitoring & Observability",
+    type: "Элективный",
+    credits: 3,
+    description: "Detect model drift, monitor performance, and maintain ML systems in production.",
+    skillsImpact: {
+      Monitoring: 35,
+      MLOps: 25,
+      DevOps: 15,
+    },
+    prerequisites: ["mlops701"],
+  },
+  {
+    id: "capstone",
+    code: "CAP 900",
+    name: "Master's Capstone Project",
+    type: "Основной",
+    credits: 6,
+    description: "Apply everything you've learned. Build a substantial project showcasing your expertise.",
+    skillsImpact: {
+      "Software Engineering": 15,
+      Communication: 20,
+      Strategy: 20,
+    },
+  },
+]

@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router";
 import {
   Field,
   FieldDescription,
@@ -59,7 +60,7 @@ export function SignupForm({
             Войти через GitHub
           </Button>
           <FieldDescription className="px-6 text-center">
-            Уже есть аккаунт? <a href="#">Войти</a>
+            Уже есть аккаунт? <Link to="/signin">Войти</Link>
           </FieldDescription>
         </Field>
       </FieldGroup>

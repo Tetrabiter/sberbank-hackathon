@@ -1,4 +1,4 @@
-import { Link } from "lucide-react";
+import Marquee from "react-fast-marquee";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
@@ -7,7 +7,7 @@ const HomePage = () => {
     <div className="w-full h-screen">
       <Header />
       <main>
-        <section className="py-20">
+        <section className="py-15">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <span className="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full mb-8">
@@ -16,7 +16,7 @@ const HomePage = () => {
 
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                 SkillSync: Ваш персональный{" "}
-                <span className="block bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+                <span className="block bg-linear-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                   навигатор магистратуры
                 </span>
               </h1>
@@ -26,40 +26,12 @@ const HomePage = () => {
                 успехи и строит индивидуальную образовательную траекторию
                 семестр за семестром
               </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/onboarding"
-                  className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-4 rounded-lg text-lg font-medium transition-colors flex items-center justify-center"
-                >
-                  Начать планирование
-                  <svg
-                    className="w-5 h-5 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
-                </Link>
-                <Link
-                  to="/about"
-                  className="border border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-4 rounded-lg text-lg font-medium transition-colors"
-                >
-                  Узнать больше
-                </Link>
-              </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-white">
+        <section className="py-15 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -169,37 +141,28 @@ const HomePage = () => {
 
         {/* CTA Section */}
         <section className="py-20 bg-blue-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-              <div className="flex-1">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Готовы построить свою идеальную магистратуру?
-                </h2>
-                <p className="text-lg opacity-90">
-                  Присоединяйтесь к сотням студентов, которые уже используют
-                  SkillSync для планирования своего образовательного пути
-                </p>
-              </div>
-
-              <Link
-                to="/register"
-                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-medium transition-colors flex items-center"
-              >
-                Начать бесплатно
-                <svg
-                  className="w-5 h-5 ml-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              <div className="flex flex-1">
+                <Marquee
+                  speed={50} // Скорость анимации
+                  delay={0} // Задержка перед стартом
+                  gradient={false} // Отключить градиенты
+                  gradientWidth={50} // Ширина градиента
+                  pauseOnHover={true} // Пауза при наведении
+                  pauseOnClick={true} // Пауза при клике
+                  direction="right" // Направление
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
+                  <p className="font-bold text-3xl">
+                    Открой двери к престижной карьере! Глубокие знания и навыки
+                    в магистратуре.
+                  </p>
+                  <p className="font-bold text-3xl"> Учись, работай, побеждай! </p>
+                  <p className="font-bold text-3xl">
+                     Углубленные знания, практический опыт, сильное комьюнити.
+                  </p>
+                </Marquee>
+              </div>
             </div>
           </div>
         </section>

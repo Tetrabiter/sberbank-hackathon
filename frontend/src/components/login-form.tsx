@@ -8,6 +8,7 @@ import {
   FieldSeparator,
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
+import { Link } from "react-router"
 
 export function LoginForm({
   className,
@@ -54,9 +55,9 @@ export function LoginForm({
           </Button>
           <FieldDescription className="text-center">
             Don&apos;t have an account?{" "}
-            <a href="#" className="underline underline-offset-4">
+            <Link to="/signup" className="underline underline-offset-4">
               Зарегистрироваться
-            </a>
+            </Link>
           </FieldDescription>
         </Field>
       </FieldGroup>
