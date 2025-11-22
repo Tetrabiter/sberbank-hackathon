@@ -17,7 +17,7 @@ export default function SignInPage() {
       </div>
       <div className="bg-muted relative hidden lg:block">
         <img
-          src="/public/20170830_vypusknicy-urfu.png"
+          src="/20170830_vypusknicy-urfu.png"
           alt="Image"
           className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
         />

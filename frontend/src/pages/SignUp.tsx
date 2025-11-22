@@ -6,7 +6,7 @@ export default function SignupPage() {
       <div className="flex flex-col gap-4 p-6 md:p-10">
         <div className="flex justify-center gap-2 md:justify-start">
           <a href="#" className="flex items-center gap-2 font-medium">
-            Acme Inc.
+            SyncSkill
           </a>
         </div>
         <div className="flex flex-1 items-center justify-center">
@@ -17,7 +17,7 @@ export default function SignupPage() {
       </div>
       <div className="bg-muted relative hidden lg:block">
         <img
-          src="/public/inostrannye-studenty_266.jpg"
+          src="/inostrannye-studenty_266.jpg"
           alt="Image"
           className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
         />

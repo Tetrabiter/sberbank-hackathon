@@ -17,31 +17,31 @@ export function LoginForm({
     <form className={cn("flex flex-col gap-6", className)} {...props}>
       <FieldGroup>
         <div className="flex flex-col items-center gap-1 text-center">
-          <h1 className="text-2xl font-bold">Login to your account</h1>
+          <h1 className="text-2xl font-bold">Войдите в свой аккаунт</h1>
           <p className="text-muted-foreground text-sm text-balance">
-            Enter your email below to login to your account
+             Введите вашу электронную почту, чтобы войти в аккаунт
           </p>
         </div>
         <Field>
-          <FieldLabel htmlFor="email">Email</FieldLabel>
+          <FieldLabel htmlFor="email">Электронная почта</FieldLabel>
           <Input id="email" type="email" placeholder="m@example.com" required />
         </Field>
         <Field>
           <div className="flex items-center">
-            <FieldLabel htmlFor="password">Password</FieldLabel>
+            <FieldLabel htmlFor="password">Пароль</FieldLabel>
             <a
               href="#"
               className="ml-auto text-sm underline-offset-4 hover:underline"
             >
-              Forgot your password?
+              Забыли пароль?
             </a>
           </div>
           <Input id="password" type="password" required />
         </Field>
         <Field>
-          <Button type="submit">Login</Button>
+          <Button type="submit">Войти</Button>
         </Field>
-        <FieldSeparator>Or continue with</FieldSeparator>
+        <FieldSeparator>Или продолжить с</FieldSeparator>
         <Field>
           <Button variant="outline" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -50,12 +50,12 @@ export function LoginForm({
                 fill="currentColor"
               />
             </svg>
-            Login with GitHub
+            Войти с помощью GitHub
           </Button>
           <FieldDescription className="text-center">
             Don&apos;t have an account?{" "}
             <a href="#" className="underline underline-offset-4">
-              Sign up
+              Зарегистрироваться
             </a>
           </FieldDescription>
         </Field>
