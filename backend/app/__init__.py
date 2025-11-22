@@ -1,0 +1,1 @@
+# FastAPI Curriculum Planner Backend
