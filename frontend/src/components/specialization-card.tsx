@@ -14,7 +14,7 @@ interface SpecializationCardProps {
 export function SpecializationCard({ specialization, isSelected = false, onClick }: SpecializationCardProps) {
   return (
     <Card
-      className={`cursor-pointer transition-all hover:shadow-lg hover:scale-[1.02] ${
+      className={`cursor-pointer mt-8 transition-all hover:shadow-lg hover:scale-[1.02] ${
         isSelected ? "ring-2 ring-blue-500 shadow-lg" : ""
       }`}
       onClick={onClick}

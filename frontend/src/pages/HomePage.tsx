@@ -30,6 +30,37 @@ const HomePage = () => {
           </div>
         </section>
 
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600 text-white">
+          <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="flex flex-1">
+                <Marquee
+                  speed={50} // Скорость анимации
+                  delay={0} // Задержка перед стартом
+                  gradient={false} // Отключить градиенты
+                  gradientWidth={50} // Ширина градиента
+                  pauseOnHover={true} // Пауза при наведении
+                  pauseOnClick={true} // Пауза при клике
+                  direction="right" // Направление
+                >
+                  <p className="font-bold text-3xl">
+                    Открой двери к престижной карьере! Глубокие знания и навыки
+                    в магистратуре.
+                  </p>
+                  <p className="font-bold text-3xl">
+                    {" "}
+                    Учись, работай, побеждай!{" "}
+                  </p>
+                  <p className="font-bold text-3xl">
+                    Углубленные знания, практический опыт, сильное комьюнити.
+                  </p>
+                </Marquee>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Features Section */}
         <section className="py-15 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,33 +114,6 @@ const HomePage = () => {
                   <p className="text-gray-600">{feature.description}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 bg-blue-600 text-white">
-          <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-              <div className="flex flex-1">
-                <Marquee
-                  speed={50} // Скорость анимации
-                  delay={0} // Задержка перед стартом
-                  gradient={false} // Отключить градиенты
-                  gradientWidth={50} // Ширина градиента
-                  pauseOnHover={true} // Пауза при наведении
-                  pauseOnClick={true} // Пауза при клике
-                  direction="right" // Направление
-                >
-                  <p className="font-bold text-3xl">
-                    Открой двери к престижной карьере! Глубокие знания и навыки
-                    в магистратуре.
-                  </p>
-                  <p className="font-bold text-3xl"> Учись, работай, побеждай! </p>
-                  <p className="font-bold text-3xl">
-                     Углубленные знания, практический опыт, сильное комьюнити.
-                  </p>
-                </Marquee>
-              </div>
             </div>
           </div>
         </section>

@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useMemo } from "react";
 import type { Course, Specialization, SkillRequirement } from "@/types/types";
 import { CourseCard } from "@/components/course-card";
@@ -52,7 +50,7 @@ export function SemesterPlanning({
     0
   );
 
-  // Calculate preview skills
+  // Расчет предварительного просмотра навыков
   const previewSkills = useMemo(() => {
     if (hoveredCourse && !selectedCourses.has(hoveredCourse.id)) {
       return calculateUpdatedSkills(currentSkills, [
@@ -67,7 +65,7 @@ export function SemesterPlanning({
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
+      {/* Шапка */}
       <div className="border-b bg-card">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between flex-wrap gap-4">
@@ -75,37 +73,39 @@ export function SemesterPlanning({
               <div className="flex items-center gap-2">
                 <GraduationCap className="w-6 h-6 text-blue-600" />
                 <h1 className="text-2xl font-bold">
-                  Semester {semester} Planning
+                  Планирование {semester} семестра
                 </h1>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Target className="w-4 h-4" />
-                <span>Goal: {specialization.name}</span>
+                <span>Цель: {specialization.name}</span>
                 <Badge variant="outline">{specialization.icon}</Badge>
               </div>
             </div>
             {onWhatIf && (
-              <Button variant="outline" onClick={onWhatIf}>
-                What If I Switch?
-              </Button>
+              <Link to={"what-if?"}>
+                <Button variant="outline" onClick={onWhatIf}>
+                  Что Если?
+                </Button>
+              </Link>
             )}
           </div>
         </div>
       </div>
 
-      {/* Main Content */}
+      {/* Основное содержимое */}
       <div className="container mx-auto px-4 py-8">
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Course Selection - Takes 2 columns */}
+          {/* Выбор курсов - занимает 2 колонки */}
           <div className="lg:col-span-2 space-y-6">
             <div className="space-y-2">
               <h2 className="text-xl font-semibold">
-                Recommended Courses for You
+                Рекомендованные курсы для вас
               </h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Our AI has analyzed your goal and current skills. These courses
-                will help you build the expertise you need. Hover over courses
-                to see their impact on your skill profile.
+                Наш ИИ проанализировал вашу цель и текущие навыки. Эти курсы
+                помогут вам приобрести необходимые знания. Наведите курсор на
+                курсы, чтобы увидеть их влияние на ваш профиль навыков.
               </p>
             </div>
 
@@ -123,16 +123,15 @@ export function SemesterPlanning({
               ))}
             </div>
 
-            {/* Action Bar */}
+            {/* Панель действий */}
             <div className="sticky bottom-6 bg-card border rounded-lg shadow-lg p-6">
               <div className="flex items-center justify-between gap-4 flex-wrap">
                 <div className="space-y-1">
                   <p className="text-sm font-medium">
-                    {selectedCourses.size} course
-                    {selectedCourses.size !== 1 ? "s" : ""} selected
+                    Выбрано курсов: {selectedCourses.size}
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    {totalCredits} total credits
+                    Всего кредитов: {totalCredits}
                   </p>
                 </div>
 
@@ -144,7 +143,7 @@ export function SemesterPlanning({
                       onClick={() => onConfirm(selectedCourseObjects)}
                       className="gap-2"
                     >
-                      Confirm & Continue
+                      Подтвердить и Продолжить
                       <ArrowRight className="w-5 h-5" />
                     </Button>
                   </Link>
@@ -155,7 +154,7 @@ export function SemesterPlanning({
                     onClick={() => onConfirm(selectedCourseObjects)}
                     className="gap-2"
                   >
-                    Confirm & Continue
+                    Подтвердить и Продолжить
                     <ArrowRight className="w-5 h-5" />
                   </Button>
                 )}
@@ -163,7 +162,7 @@ export function SemesterPlanning({
             </div>
           </div>
 
-          {/* Skill Visualization - Sticky sidebar */}
+          {/* Визуализация навыков - Боковая панель */}
           <div className="space-y-6">
             <div className="sticky top-6 space-y-6">
               <SkillRadarChart

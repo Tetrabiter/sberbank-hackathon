@@ -18,14 +18,14 @@ interface WhatIfModalProps {
   onSwitch?: (newSpecialization: Specialization) => void
 }
 
-export function WhatIfModal({ open, onOpenChange, currentProgress, onSwitch }: WhatIfModalProps) {
+export function WhatIfPage({ open, onOpenChange, currentProgress, onSwitch }: WhatIfModalProps) {
   const [selectedSpec, setSelectedSpec] = useState<Specialization | null>(null)
   const [analysisResult, setAnalysisResult] = useState<ReturnType<typeof canSwitchSpecialization> | null>(null)
 
   const handleAnalyze = () => {
     if (!selectedSpec) return
 
-    const totalSemesters = 4 // Master's is typically 4 semesters
+    const totalSemesters = 4 // Магистратура обычно 4 семестра
     const remainingSemesters = totalSemesters - currentProgress.currentSemester + 1
 
     const result = canSwitchSpecialization(currentProgress, selectedSpec, remainingSemesters)
@@ -44,27 +44,27 @@ export function WhatIfModal({ open, onOpenChange, currentProgress, onSwitch }: W
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="w-full max-w-6xl max-h-screen overflow-y-auto overflow-x-hidden">
         <DialogHeader>
-          <DialogTitle className="text-2xl">What If I Switch?</DialogTitle>
+          <DialogTitle className="text-2xl">Что если я изменю направление?</DialogTitle>
           <DialogDescription>
-            Explore alternative career paths and see if you can pivot with your remaining time.
+            Изучите альтернативные карьерные пути и посмотрите, сможете ли вы изменить направление за оставшееся время.
           </DialogDescription>
         </DialogHeader>
 
         <div className="space-y-6">
-          {/* Current specialization info */}
+          {/* Информация о текущей специализации */}
           <Alert>
             <Info className="w-4 h-4" />
             <AlertDescription>
-              You're currently on track to become a <strong>{currentProgress.selectedSpecialization?.name}</strong>.
-              You're in semester {currentProgress.currentSemester} of 4.
+              В настоящее время вы движетесь к становлению <strong>{currentProgress.selectedSpecialization?.name}</strong>.
+              Вы находитесь в семестре {currentProgress.currentSemester} из 4.
             </AlertDescription>
           </Alert>
 
-          {/* Specialization selection */}
+          {/* Выбор специализации */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">What would you like to become instead?</h3>
+            <h3 className="text-lg font-semibold">Кем бы вы хотели стать вместо этого?</h3>
             <div className="grid md:grid-cols-2 gap-4">
               {otherSpecializations.map((spec) => (
                 <SpecializationCard
@@ -80,18 +80,18 @@ export function WhatIfModal({ open, onOpenChange, currentProgress, onSwitch }: W
             </div>
           </div>
 
-          {/* Analysis button */}
+          {/* Кнопка анализа */}
           {selectedSpec && !analysisResult && (
             <Button onClick={handleAnalyze} size="lg" className="w-full">
-              Analyze Feasibility
+              Проанализировать возможность
             </Button>
           )}
 
-          {/* Analysis results */}
+          {/* Результаты анализа */}
           {analysisResult && selectedSpec && (
             <div className="space-y-4 p-6 bg-secondary/50 rounded-lg">
               <div className="grid md:grid-cols-2 gap-6">
-                {/* Result summary */}
+                {/* Сводка результатов */}
                 <div className="space-y-4">
                   <Alert variant={analysisResult.feasible ? "default" : "destructive"}>
                     {analysisResult.feasible ? <CheckCircle2 className="w-4 h-4" /> : <XCircle className="w-4 h-4" />}
@@ -100,7 +100,7 @@ export function WhatIfModal({ open, onOpenChange, currentProgress, onSwitch }: W
 
                   {analysisResult.feasible && analysisResult.coursesNeeded && (
                     <div className="space-y-2">
-                      <p className="text-sm font-medium">Courses you'll need to take:</p>
+                      <p className="text-sm font-medium">Курсы, которые вам нужно будет пройти:</p>
                       <div className="space-y-1 text-sm">
                         {analysisResult.coursesNeeded.map((course) => (
                           <div key={course.id} className="flex items-center gap-2 text-muted-foreground">
@@ -113,7 +113,7 @@ export function WhatIfModal({ open, onOpenChange, currentProgress, onSwitch }: W
                   )}
                 </div>
 
-                {/* Skill comparison */}
+                {/* Сравнение навыков */}
                 <div>
                   <SkillRadarChart
                     currentSkills={currentProgress.currentSkills}
@@ -124,11 +124,11 @@ export function WhatIfModal({ open, onOpenChange, currentProgress, onSwitch }: W
                 </div>
               </div>
 
-              {/* Action buttons */}
+              {/* Кнопки действий */}
               <div className="flex gap-3 pt-4">
                 {analysisResult.feasible && onSwitch && (
                   <Button onClick={handleConfirmSwitch} size="lg" className="flex-1">
-                    Switch to {selectedSpec.name}
+                    Перейти на {selectedSpec.name}
                   </Button>
                 )}
                 <Button
@@ -139,7 +139,7 @@ export function WhatIfModal({ open, onOpenChange, currentProgress, onSwitch }: W
                   }}
                   size="lg"
                 >
-                  Try Another Path
+                    Попробовать другой путь
                 </Button>
               </div>
             </div>

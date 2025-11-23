@@ -70,11 +70,11 @@ export function OnboardingPage({ onComplete }: OnboardingScreenProps) {
           </div>
 
           {/* Специализации */}
-          <div className="space-y-4">
-            <h2 className="text-2xl font-semibold text-center">
+          <div className="space-y-4 mt-10">
+            <h2 className="text-4xl font-bold text-center">
               Я хочу стать...
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="">
               {specializations.map((spec) => (
                 <SpecializationCard
                   key={spec.id}
@@ -93,7 +93,7 @@ export function OnboardingPage({ onComplete }: OnboardingScreenProps) {
                 <Button
                   size="lg"
                   onClick={() => onComplete(selectedSpec)}
-                  className="gap-2 text-lg px-8"
+                  className="gap-2 bg-blue-600 text-lg px-8"
                 >
                   Начать мой путь как {selectedSpec.name}
                   <ArrowRight className="w-5 h-5" />

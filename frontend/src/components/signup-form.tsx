@@ -36,6 +36,10 @@ export function SignupForm({
           </FieldDescription>
         </Field>
         <Field>
+          <FieldLabel htmlFor="specialization">Номер специальности</FieldLabel>
+          <Input id="specialization" type="text" placeholder="02.03.02" required />
+        </Field>
+        <Field>
           <FieldLabel htmlFor="password">Пароль</FieldLabel>
           <Input id="password" type="password" required />
           <FieldDescription>Должно быть не менее 8 символов</FieldDescription>
@@ -47,7 +51,7 @@ export function SignupForm({
         </Field>
         <Field>
           <Link to={"/onboarding"}>
-            <Button className="w-full" type="submit">Создать аккаунт</Button>
+            <Button className="w-full bg-blue-600" type="submit">Создать аккаунт</Button>
           </Link>
         </Field>
         <FieldSeparator>Продолжить с</FieldSeparator>

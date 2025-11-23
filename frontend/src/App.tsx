@@ -9,7 +9,7 @@ import { useState } from "react";
 
 import type { Course, Specialization, StudentProgress } from "@/types/types"
 import { recommendCoursesForSemester, calculateUpdatedSkills } from "@/lib/ml-recomender"
-import { WhatIfModal } from "./pages/WhatIfPage";
+import { WhatIfPage } from "./pages/WhatIfPage";
 import { OnboardingPage } from "./pages/OnboardingPage";
 
 type AppState = "onboarding" | "planning" | "completed"
@@ -185,8 +185,8 @@ function App() {
             />
           }
         />
-        <Route path="/what-if?" element={
-          <WhatIfModal
+        <Route path="/courses/what-if" element={
+          <WhatIfPage
             open={showWhatIf}
             onOpenChange={setShowWhatIf}
             currentProgress={progress}
