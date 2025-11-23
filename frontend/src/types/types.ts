@@ -22,3 +22,32 @@ export interface Course {
   skillsImpact: SkillRequirement // skills this course improves
   prerequisites?: string[] // course IDs
 }
+
+export type SkillCategory =
+  | "Programming"
+  | "Mathematics"
+  | "Machine Learning"
+  | "Data Engineering"
+  | "Software Engineering"
+  | "Cloud & DevOps"
+  | "Business & Communication"
+
+export interface Skill {
+  name: string
+  category: SkillCategory
+  level: number // 0-100
+}
+
+export interface SemesterPlan {
+  semester: number
+  courses: Course[]
+  completed: boolean
+}
+
+export interface StudentProgress {
+  currentSemester: number
+  selectedSpecialization: Specialization | null
+  currentSkills: SkillRequirement
+  semesterPlans: SemesterPlan[]
+  totalCredits: number
+}

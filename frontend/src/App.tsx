@@ -3,6 +3,9 @@ import HomePage from "./pages/HomePage";
 import SignInPage from "./pages/SignIn";
 import SignupPage from "./pages/SignUp";
 import { useEffect } from "react";
+import CareerPage from "./pages/CareerPage";
+import SemesterPlaning from "./pages/SemesterPlaning";
+import CompletionPage from "./pages/Completion";
 
 
 function App() {
@@ -36,6 +39,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/signin" element={<SignInPage />} />
+        <Route path="/career" element={<CareerPage />} />
+        <Route path="/courses" element={<SemesterPlaning />} />
+        <Route path="/completion" element={<CompletionPage />} />
       </Routes>
     </>
   );
