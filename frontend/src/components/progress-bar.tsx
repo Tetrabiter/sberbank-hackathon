@@ -17,15 +17,15 @@ export function SkillProgressBars({
   previewSkills,
   className = "",
 }: SkillProgressBarsProps) {
-  // Get all unique skills from target
+  // Получаем все уникальные навыки из целевых
   const skills = Object.keys(targetSkills).sort()
 
   return (
     <Card className={`p-6 ${className}`}>
       <div className="space-y-4">
         <div>
-          <h3 className="text-lg font-semibold">Skill Breakdown</h3>
-          <p className="text-sm text-muted-foreground">Detailed progress toward each skill requirement</p>
+          <h3 className="text-lg font-semibold">Детализация навыков</h3>
+          <p className="text-sm text-muted-foreground">Подробный прогресс по каждому требуемому навыку</p>
         </div>
 
         <div className="space-y-4">

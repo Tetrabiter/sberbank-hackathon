@@ -1,15 +1,15 @@
 import type { Course } from "@/types/types";
 
 export const allCourses: Course[] = [
-  // Semester 1 - Foundation Courses
+  // Семестр 1 - Базовые курсы
   {
     id: "cs501",
     code: "CS 501",
-    name: "Advanced Python Programming",
+    name: "Продвинутое программирование на Python",
     type: "Основной",
     credits: 4,
     description:
-      "Master Python for data science and ML. Cover advanced topics like decorators, generators, and async programming.",
+      "Освойте Python для data science и ML. Рассматриваются продвинутые темы: декораторы, генераторы и асинхронное программирование.",
     skillsImpact: {
       Python: 25,
       "Software Engineering": 15,
@@ -18,11 +18,11 @@ export const allCourses: Course[] = [
   {
     id: "math510",
     code: "MATH 510",
-    name: "Linear Algebra & Optimization",
+    name: "Линейная алгебра и оптимизация",
     type: "Основной",
     credits: 4,
     description:
-      "Essential mathematical foundations for ML. Matrix operations, eigenvalues, and optimization techniques.",
+      "Основы математики для ML. Операции с матрицами, собственные значения и методы оптимизации.",
     skillsImpact: {
       Mathematics: 30,
       Statistics: 10,
@@ -31,10 +31,10 @@ export const allCourses: Course[] = [
   {
     id: "stat520",
     code: "STAT 520",
-    name: "Probability & Statistical Inference",
+    name: "Теория вероятностей и статистические выводы",
     type: "Основной",
     credits: 4,
-    description: "Rigorous treatment of probability theory, distributions, hypothesis testing, and Bayesian inference.",
+    description: "Углубленное изучение теории вероятностей, распределений, проверки гипотез и байесовского вывода.",
     skillsImpact: {
       Statistics: 30,
       Mathematics: 15,
@@ -43,24 +43,24 @@ export const allCourses: Course[] = [
   {
     id: "cs502",
     code: "CS 502",
-    name: "Data Structures & Algorithms",
+    name: "Структуры данных и алгоритмы",
     type: "Основной",
     credits: 3,
-    description: "Advanced algorithms for data processing. Time complexity, graph algorithms, and dynamic programming.",
+    description: "Продвинутые алгоритмы для обработки данных. Сложность алгоритмов, графовые алгоритмы и динамическое программирование.",
     skillsImpact: {
       "Software Engineering": 25,
       Python: 10,
     },
   },
 
-  // Semester 2 - Основной ML & Data
+  // Семестр 2 - Основы ML и данных
   {
     id: "ml601",
     code: "ML 601",
-    name: "Machine Learning Fundamentals",
+    name: "Основы машинного обучения",
     type: "Основной",
     credits: 4,
-    description: "Supervised and unsupervised learning. Regression, classification, clustering, and model evaluation.",
+    description: "Обучение с учителем и без учителя. Регрессия, классификация, кластеризация и оценка моделей.",
     skillsImpact: {
       "Machine Learning": 30,
       Python: 15,
@@ -71,10 +71,10 @@ export const allCourses: Course[] = [
   {
     id: "data601",
     code: "DATA 601",
-    name: "Database Systems & SQL",
+    name: "Системы баз данных и SQL",
     type: "Основной",
     credits: 3,
-    description: "Relational databases, query optimization, indexing, and transaction management.",
+    description: "Реляционные базы данных, оптимизация запросов, индексирование и управление транзакциями.",
     skillsImpact: {
       SQL: 35,
       "Data Engineering": 15,
@@ -83,10 +83,10 @@ export const allCourses: Course[] = [
   {
     id: "vis601",
     code: "VIS 601",
-    name: "Data Visualization & Analytics",
+    name: "Визуализация и аналитика данных",
     type: "Элективный",
     credits: 3,
-    description: "Tell stories with data. Master visualization libraries and dashboard creation.",
+    description: "Рассказывайте истории с помощью данных. Освойте библиотеки визуализации и создание дашбордов.",
     skillsImpact: {
       "Data Visualization": 30,
       "Data Analysis": 20,
@@ -96,10 +96,10 @@ export const allCourses: Course[] = [
   {
     id: "bi601",
     code: "BI 601",
-    name: "Business Intelligence & Strategy",
+    name: "Бизнес-аналитика и стратегия",
     type: "Элективный",
     credits: 3,
-    description: "Translate data insights into business value. KPIs, metrics, and strategic decision-making.",
+    description: "Преобразуйте данные в бизнес-ценность. KPI, метрики и стратегическое принятие решений.",
     skillsImpact: {
       "Business Intelligence": 30,
       "Data Analysis": 15,
@@ -107,14 +107,14 @@ export const allCourses: Course[] = [
     },
   },
 
-  // Semester 3 - Advanced Specialization
+  // Семестр 3 - Продвинутая специализация
   {
     id: "dl701",
     code: "DL 701",
-    name: "Deep Learning & Neural Networks",
+    name: "Глубокое обучение и нейронные сети",
     type: "Элективный",
     credits: 4,
-    description: "CNNs, RNNs, Transformers, and attention mechanisms. Implement models with PyTorch/TensorFlow.",
+    description: "Сверточные сети, рекуррентные сети, трансформеры и механизмы внимания. Реализация моделей на PyTorch/TensorFlow.",
     skillsImpact: {
       "Deep Learning": 35,
       "Machine Learning": 15,
@@ -125,10 +125,10 @@ export const allCourses: Course[] = [
   {
     id: "cloud701",
     code: "CLOUD 701",
-    name: "Cloud Computing & Architecture",
+    name: "Облачные вычисления и архитектура",
     type: "Элективный",
     credits: 3,
-    description: "AWS/Azure/GCP services. Scalable infrastructure, containerization, and serverless computing.",
+    description: "Сервисы AWS/Azure/GCP. Масштабируемая инфраструктура, контейнеризация и бессерверные вычисления.",
     skillsImpact: {
       "Cloud Computing": 35,
       DevOps: 20,
@@ -138,10 +138,10 @@ export const allCourses: Course[] = [
   {
     id: "mlops701",
     code: "MLOPS 701",
-    name: "MLOps & Production ML",
+    name: "MLOps и продакшн ML",
     type: "Элективный",
     credits: 4,
-    description: "Deploy ML models to production. CI/CD for ML, monitoring, versioning, and A/B testing.",
+    description: "Развертывание ML-моделей в продакшн. CI/CD для ML, мониторинг, версионирование и A/B тестирование.",
     skillsImpact: {
       MLOps: 40,
       "Cloud Computing": 15,
@@ -152,10 +152,10 @@ export const allCourses: Course[] = [
   {
     id: "data701",
     code: "DATA 701",
-    name: "Big Data & Distributed Systems",
+    name: "Большие данные и распределенные системы",
     type: "Элективный",
     credits: 4,
-    description: "Spark, Hadoop, and distributed computing. Process massive datasets efficiently.",
+    description: "Spark, Hadoop и распределенные вычисления. Эффективная обработка больших наборов данных.",
     skillsImpact: {
       "Data Engineering": 35,
       "Distributed Systems": 30,
@@ -166,10 +166,10 @@ export const allCourses: Course[] = [
   {
     id: "nlp701",
     code: "NLP 701",
-    name: "Natural Language Processing",
+    name: "Обработка естественного языка",
     type: "Элективный",
     credits: 4,
-    description: "Modern NLP with transformers. Text classification, generation, and language models.",
+    description: "Современный NLP с трансформерами. Классификация текста, генерация и языковые модели.",
     skillsImpact: {
       "Deep Learning": 20,
       "Machine Learning": 15,
@@ -178,14 +178,14 @@ export const allCourses: Course[] = [
     prerequisites: ["ml601"],
   },
 
-  // Semester 4 - Advanced & Capstone
+  // Семестр 4 - Продвинутые курсы и дипломный проект
   {
     id: "research801",
     code: "RES 801",
-    name: "Research Methods & Experimentation",
+    name: "Методы исследования и экспериментирование",
     type: "Элективный",
     credits: 3,
-    description: "Design rigorous experiments. Statistical testing, causal inference, and reproducible research.",
+    description: "Планирование строгих экспериментов. Статистическое тестирование, причинный вывод и воспроизводимые исследования.",
     skillsImpact: {
       "Research Methods": 35,
       Statistics: 20,
@@ -195,10 +195,10 @@ export const allCourses: Course[] = [
   {
     id: "rl801",
     code: "RL 801",
-    name: "Reinforcement Learning",
+    name: "Обучение с подкреплением",
     type: "Элективный",
     credits: 4,
-    description: "Train agents through trial and error. Q-learning, policy gradients, and deep RL.",
+    description: "Обучение агентов методом проб и ошибок. Q-обучение, градиенты политики и глубокое RL.",
     skillsImpact: {
       "Deep Learning": 25,
       "Machine Learning": 20,
@@ -209,10 +209,10 @@ export const allCourses: Course[] = [
   {
     id: "etl801",
     code: "ETL 801",
-    name: "Advanced ETL & Data Pipelines",
+    name: "Продвинутый ETL и data pipelines",
     type: "Элективный",
     credits: 3,
-    description: "Build robust data pipelines. Airflow, data quality, and pipeline orchestration.",
+    description: "Создание надежных data pipelines. Airflow, качество данных и оркестрация пайплайнов.",
     skillsImpact: {
       ETL: 40,
       "Data Engineering": 20,
@@ -223,10 +223,10 @@ export const allCourses: Course[] = [
   {
     id: "prod801",
     code: "PROD 801",
-    name: "AI Product Development",
+    name: "Разработка AI-продуктов",
     type: "Элективный",
     credits: 3,
-    description: "Build AI products users love. User research, roadmapping, and cross-functional leadership.",
+    description: "Создавайте AI-продукты, которые нравятся пользователям. Исследование пользователей, дорожные карты и кросс-функциональное лидерство.",
     skillsImpact: {
       "Product Management": 40,
       "Business Intelligence": 20,
@@ -236,10 +236,10 @@ export const allCourses: Course[] = [
   {
     id: "monitor801",
     code: "MON 801",
-    name: "ML Monitoring & Observability",
+    name: "Мониторинг и наблюдаемость ML",
     type: "Элективный",
     credits: 3,
-    description: "Detect model drift, monitor performance, and maintain ML systems in production.",
+    description: "Обнаружение дрейфа моделей, мониторинг производительности и поддержание ML-систем в продакшн.",
     skillsImpact: {
       Monitoring: 35,
       MLOps: 25,
@@ -250,14 +250,14 @@ export const allCourses: Course[] = [
   {
     id: "capstone",
     code: "CAP 900",
-    name: "Master's Capstone Project",
+    name: "Дипломный проект магистратуры",
     type: "Основной",
     credits: 6,
-    description: "Apply everything you've learned. Build a substantial project showcasing your expertise.",
+    description: "Примените все полученные знания. Создайте значимый проект, демонстрирующий вашу экспертизу.",
     skillsImpact: {
       "Software Engineering": 15,
       Communication: 20,
       Strategy: 20,
     },
   },
-]
+];

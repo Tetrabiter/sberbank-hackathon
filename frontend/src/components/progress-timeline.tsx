@@ -67,7 +67,7 @@ export function ProgressTimeline({ semesterPlans, currentSemester, className = "
                 {/* Content */}
                 <div className="flex-1 pb-8">
                   <div className="flex items-center gap-2 mb-2">
-                    <h4 className="font-semibold">Semester {plan.semester}</h4>
+                    <h4 className="font-semibold">Семестер {plan.semester}</h4>
                     {isCompleted && (
                       <Badge
                         variant="outline"

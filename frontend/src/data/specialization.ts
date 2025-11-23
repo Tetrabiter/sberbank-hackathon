@@ -1,11 +1,10 @@
 import type { Specialization } from "@/types/types";
 
-
 export const specializations: Specialization[] = [
   {
     id: "ml-engineer",
-    name: "Machine Learning Engineer",
-    description: "Build and deploy ML models at scale. Work on cutting-edge AI systems and production infrastructure.",
+    name: "Инженер машинного обучения",
+    description: "Создавайте и развертывайте ML-модели в масштабе. Работайте с передовыми AI-системами и продакшен-инфраструктурой.",
     marketabilityScore: 95,
     avgSalary: "$130k - $180k",
     requiredSkills: {
@@ -21,9 +20,9 @@ export const specializations: Specialization[] = [
   },
   {
     id: "data-scientist",
-    name: "Data Scientist",
+    name: "Аналитик данных",
     description:
-      "Extract insights from data to drive business decisions. Master statistical analysis and predictive modeling.",
+      "Извлекайте инсайты из данных для принятия бизнес-решений. Освойте статистический анализ и предиктивное моделирование.",
     marketabilityScore: 92,
     avgSalary: "$120k - $170k",
     requiredSkills: {

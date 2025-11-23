@@ -30,10 +30,6 @@ export function SignupForm({
         <Field>
           <FieldLabel htmlFor="email">Электронная почта</FieldLabel>
           <Input id="email" type="email" placeholder="m@example.com" required />
-          <FieldDescription>
-            Мы будем использовать это для связи с вами. Мы не передадим вашу
-            почту третьим лицам.
-          </FieldDescription>
         </Field>
         <Field>
           <FieldLabel htmlFor="specialization">Номер специальности</FieldLabel>
