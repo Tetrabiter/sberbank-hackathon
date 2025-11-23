@@ -7,7 +7,6 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg"></div>
             <span className="text-xl font-bold text-gray-900 font-sans">SkillSync</span>
           </Link>
 
@@ -23,7 +22,7 @@ const Header = () => {
               to="/signup" 
               className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-md font-medium font-sans transition-colors"
             >
-              Начать бесплатно
+              Зарегистрироваться 
             </Link>
           </nav>
         </div>

@@ -8,7 +8,6 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           {/* Brand */}
           <div className="flex items-center mb-4 md:mb-0">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg"></div>
             <span className="ml-2 text-xl font-bold font-sans">SkillSync</span>
           </div>
 
