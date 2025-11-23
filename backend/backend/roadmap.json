@@ -1,0 +1,48 @@
+{
+  "semester1": {
+    "course1": {
+      "id": "course_id",
+      "name": "course_name",
+      "difficulty": "course_difficulty",
+      "workload": "course_workload_hours",
+      "skills": "course_skills"
+    },
+    "course2": {
+      "id": "course_id",
+      "name": "course_name",
+      "difficulty": "course_difficulty",
+      "workload": "course_workload_hours",
+      "skills": "course_skills"
+    },
+    "course3": {
+      "id": "course_id",
+      "name": "course_name",
+      "difficulty": "course_difficulty",
+      "workload": "course_workload_hours",
+      "skills": "course_skills"
+    }
+  },
+  "semester2": {
+    "course1": {
+      "id": "course_id",
+      "name": "course_name",
+      "difficulty": "course_difficulty",
+      "workload": "course_workload_hours",
+      "skills": "course_skills"
+    },
+    "course2": {
+      "id": "course_id",
+      "name": "course_name",
+      "difficulty": "course_difficulty",
+      "workload": "course_workload_hours",
+      "skills": "course_skills"
+    },
+    "course3": {
+      "id": "course_id",
+      "name": "course_name",
+      "difficulty": "course_difficulty",
+      "workload": "course_workload_hours",
+      "skills": "course_skills"
+    }
+  }
+}
